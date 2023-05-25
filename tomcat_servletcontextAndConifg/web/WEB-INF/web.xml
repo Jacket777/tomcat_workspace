@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <context-param>
+        <param-name>beijing</param-name>
+        <param-value>beautiful</param-value>
+    </context-param>
+    <context-param>
+        <param-name>china</param-name>
+        <param-value>great</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>ServletContextServlet</servlet-name>
+        <servlet-class>com.msb.ServletContextServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletContextServlet</servlet-name>
+        <url-pattern>/context</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletContextServlet2</servlet-name>
+        <servlet-class>com.msb.ServletContextServlet2</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ServletContextServlet2</servlet-name>
+        <url-pattern>/context2</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>NumServlet</servlet-name>
+        <servlet-class>com.context.NumServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NumServlet</servlet-name>
+        <url-pattern>/num</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletConfigServlet</servlet-name>
+        <servlet-class>com.msb.ServletConfigServlet</servlet-class>
+        <init-param>
+            <param-name>china</param-name>
+            <param-value>beijing</param-value>
+        </init-param>
+        <init-param>
+            <param-name>hebei</param-name>
+            <param-value>shijiazhuang</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletConfigServlet</servlet-name>
+        <url-pattern>/config</url-pattern>
+    </servlet-mapping>
+
+</web-app>
